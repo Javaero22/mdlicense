@@ -1,0 +1,16 @@
+<pcml version="1.0">
+
+<!-- PCML source for calling MDREPPWD -->
+    
+  <!-- Program MDREPPWD and its parameter list -->
+  <program name="mdreppwd">
+    <struct name="parms" 	usage="inputoutput">
+      <data name="userId"   type="char"   length="10"  	init=" "/>
+      <data name="oldPw"   	type="char"   length="20"  	init=" "/>
+      <data name="newPw"   	type="char"   length="20"  	init=" "/>
+      <data name="severity" type="char"   length="2"  	init=" "/>
+      <data name="message" 	type="char"   length="60"  	init=" "/>
+    </struct>
+  </program>
+
+</pcml>

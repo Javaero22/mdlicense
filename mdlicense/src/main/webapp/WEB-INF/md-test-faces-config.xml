@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+
+	<managed-bean>
+		<managed-bean-name>applicationConfiguration</managed-bean-name>
+		<managed-bean-class>com.md.mdcms.backingbean.ApplicationConfigurationBean</managed-bean-class>
+		<managed-bean-scope>application</managed-bean-scope>
+		
+		<managed-property>
+			<property-name>appPropPrefix</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>mdt.</value>
+		</managed-property>
+		
+		<managed-property>
+			<property-name>client</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>CUSTOM_W</value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>contactLabel</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>Contact for Assistance</value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>contactLink</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>http://www.midrangedynamics.com/contact/</value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>contactPhone</property-name>
+			<property-class>java.lang.String</property-class>
+			<value></value>
+		</managed-property>
+
+		<!--
+			#corporate identity 
+			name of folder containing corporate identity contents 
+			default: md
+		-->
+		<managed-property>
+			<property-name>corporateIdentity</property-name>
+			<property-class>java.lang.String</property-class>
+			<value></value>
+		</managed-property>
+		
+		<!--
+			#dateFormat
+			YYYY -> year
+			MM   -> month
+			DD   -> day
+			Valid dateFormatSeparators: 
+			- ' ' blank 
+			- '/' us
+			- '-' eu
+			- '.' ch
+			- ',' os
+			default: DD.MM.YYYY
+		-->
+		<managed-property>
+			<property-name>dateFormat</property-name>
+			<property-class>java.lang.String</property-class>
+			<value></value>
+		</managed-property>
+		
+		<managed-property>
+			<property-name>environment</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>MD</value>
+		</managed-property>
+		
+		<!--
+			#firstDayOfWeek
+			valid values:
+			- Sunday
+			- Monday
+			default: Monday
+		-->
+		<managed-property>
+			<property-name>firstDayOfWeek</property-name>
+			<property-class>java.lang.String</property-class>
+			<value></value>
+		</managed-property>
+		
+		<managed-property>
+			<property-name>gmtOffsetForTS</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>+0200</value>
+		</managed-property>
+		
+		<managed-property>
+			<property-name>hostEnv</property-name>
+			<property-class>java.lang.String</property-class>
+			<value></value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>host</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>mrdyn61.mdcms.ch;66.159.188.139</value>
+			<!-- 
+			<value>mrdyn61.mdcms.ch;66.159.188.139</value>
+			 -->
+		</managed-property>
+		
+		<managed-property>
+			<property-name>iref</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>Ref</value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>ireflink</property-name>
+			<property-class>java.lang.String</property-class>
+			<value></value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>ldapsearchbase</property-name>
+			<property-class>java.lang.String</property-class>
+			<value></value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>ldapconverttocn</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<value>false</value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>ldapDomainController</property-name>
+			<property-class>java.lang.String</property-class>
+			<value></value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>ldappassword</property-name>
+			<property-class>java.lang.String</property-class>
+			<value></value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>ldapserver</property-name>
+			<property-class>java.lang.String</property-class>
+			<value></value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>ldapprinciple</property-name>
+			<property-class>java.lang.String</property-class>
+			<value></value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>locationForTS</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>Zurich</value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>logoff</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>http://www.midrangedynamics.com</value>
+		</managed-property>
+
+ 		<managed-property>
+			<property-name>networkUserProviderClass</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>com.md.mdcms.base.MdNetworkUserProvider</value>
+		</managed-property>
+
+		<!--
+			#systemUser
+			required when: userType = external or mdsec
+		-->
+		<managed-property>
+			<property-name>systemUser</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>mdconnect</value> 
+			<!-- 
+			<value>mdconnect</value> 
+			<value>MDCONNECT2</value> 
+			 -->
+		</managed-property>
+		<!--
+			#systemPw
+			systemPw must be stored in encrypted form. 
+			use ..\tools\EncryptPassword.jar to generate encrypted password string
+			execute from command shell using command java -jar EncryptPassword.jar
+			required when: userType = external or mdsec
+		-->
+		<managed-property>
+			<property-name>systemPw</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>TURDTVM=</value>
+			<!-- 
+			<value>TURDTVM=</value>
+			<value>TURDTVNpc1RoZUJlc3Qh</value>
+			 -->
+		</managed-property>
+
+		<managed-property>
+			<property-name>timeSeparator</property-name>
+			<property-class>java.lang.String</property-class>
+			<value></value>
+		</managed-property>
+
+		<!--
+			#userType
+			Possible values: 
+			- 'external' 	LDAP user 
+			- 'iseries' 	iSeries
+			- 'mdsec'   	MDSEC -> systemUser/Pw mandatory user
+		-->
+		<managed-property>
+			<property-name>userType</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>iseries</value>
+		</managed-property>
+		
+		<managed-property>
+            <property-name>userUser</property-name>
+            <property-class>java.lang.String</property-class>
+            <value>system</value>
+        </managed-property>
+		
+		
+	</managed-bean>
+
+</faces-config>

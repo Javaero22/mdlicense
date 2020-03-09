@@ -1,0 +1,28 @@
+<pcml version="1.0">
+
+<!-- PCML source for calling MDREPCON -->
+    
+  <!-- Program MDREPCON and its parameter list -->
+  <program name="mdrepcon">
+    <struct name="parms" usage="inputoutput">
+      <data name="environment"    type="char"   length="4"/>
+      <data name="userPID"        type="char"   length="30"/>
+      <data name="userExternal"   type="char"   length="1"  init=" "/>
+      <data name="client"         type="char"   length="8"  init="WORKFLOW"/>
+      <data name="jobName"        type="char"   length="10" init=" "/>
+      <data name="jobUser"        type="char"   length="10" init=" "/>
+      <data name="jobNumber"      type="char"   length="6"  init=" "/>
+      <data name="mdxref"         type="char"   length="1"  init=" "/>      
+      <data name="mdcms"          type="char"   length="1"  init=" "/>
+      <data name="buildDate"      type="char"   length="8"  init=" "/>
+      <data name="dateFormat"     type="char"   length="10" init=" "/>
+      <data name="timeSep"     	  type="char"   length="1"  init=" "/>
+      <data name="returnMessage"  type="char"   length="60" init=" "/>      
+      <data name="threads"  	  type="char"   length="2" 	init=" "/>      
+      <data name="version"  	  type="char"   length="6" 	init=" "/>      
+      <data name="systemUser"  	  type="char"   length="10"	init=" "/>      
+      <data name="userControl" 	  type="char"   length="7"	init=" "/>      
+    </struct>
+  </program>
+
+</pcml>

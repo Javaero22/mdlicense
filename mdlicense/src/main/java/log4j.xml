@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration>
+	<appender name="debugfile" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxFileSize" value="100KB" />
+		<param name="maxBackupIndex" value="20" />
+		<param name="File"
+			value="${catalina.home}/mdLicense_logs/mdLicense_Debug_test.log" />
+		<param name="threshold" value="debug" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{dd.MM.yyyy-HH:mm:ss,SSS} %5p %c{1}/%M:%L - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="debug" />
+			<param name="LevelMax" value="debug" />
+		</filter>
+	</appender>
+	<appender name="tracefile" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxFileSize" value="100KB" />
+		<param name="maxBackupIndex" value="20" />
+		<param name="File"
+			value="${catalina.home}/mdLicense_logs/mdLicense_Trace_test.log" />
+		<param name="threshold" value="trace" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{dd.MM.yyyy-HH:mm:ss,SSS} %5p %c{1}/%M:%L - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="trace" />
+			<param name="LevelMax" value="trace" />
+		</filter>
+	</appender>
+	<appender name="infofile" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxFileSize" value="100KB" />
+		<param name="maxBackupIndex" value="20" />
+		<param name="File"
+			value="${catalina.home}/mdLicense_logs/mdLicense_Info_test.log" />
+		<param name="threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{dd.MM.yyyy-HH:mm:ss,SSS} %5p %c{1}/%M:%L - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="info" />
+			<param name="LevelMax" value="info" />
+		</filter>
+	</appender>
+	<appender name="warnfile" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxFileSize" value="200KB" />
+		<param name="maxBackupIndex" value="25" />
+		<param name="File"
+			value="${catalina.home}/mdLicense_logs/mdLicense_Warn_test.log" />
+		<param name="threshold" value="warn" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{dd.MM.yyyy-HH:mm:ss,SSS} %5p %c{1}/%M:%L - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="warn" />
+			<param name="LevelMax" value="warn" />
+		</filter>
+	</appender>
+	<appender name="errorfile" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxFileSize" value="100KB" />
+		<param name="maxBackupIndex" value="20" />
+		<param name="File"
+			value="${catalina.home}/mdLicense_logs/mdLicense_Error_test.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{dd.MM.yyyy-HH:mm:ss,SSS} %5p %c{1}/%M:%L - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="error" />
+			<param name="LevelMax" value="error" />
+		</filter>
+	</appender>
+	<appender name="fatalfile" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxFileSize" value="100KB" />
+		<param name="maxBackupIndex" value="20" />
+		<param name="File"
+			value="${catalina.home}/mdLicense_logs/mdLicense_Fatal_test.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{dd.MM.yyyy-HH:mm:ss,SSS} %5p %c{1}/%M:%L - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="fatal" />
+			<param name="LevelMax" value="fatal" />
+		</filter>
+	</appender>
+
+	<root>
+		<priority value="debug"></priority>
+		<appender-ref ref="fatalfile" />
+		<appender-ref ref="errorfile" />
+		<appender-ref ref="warnfile" />
+		<appender-ref ref="infofile" />
+		<appender-ref ref="debugfile" />
+		<appender-ref ref="tracefile" />
+	</root>
+</log4j:configuration>
